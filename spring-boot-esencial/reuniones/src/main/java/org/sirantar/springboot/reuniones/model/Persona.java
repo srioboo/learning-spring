@@ -1,7 +1,13 @@
 package org.sirantar.springboot.reuniones.model;
 
+import jakarta.persistence.*;
 
+@Entity
+@Table(name="persona")
 public class Persona {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre;
     private String apellidos;

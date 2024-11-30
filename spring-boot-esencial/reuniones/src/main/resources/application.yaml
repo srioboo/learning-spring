@@ -11,9 +11,12 @@ logging:
 spring:
   h2:
     console:
-      enabled: true # activo consola de h2
+      enabled: true # activate localhost:8080/h2-console
   datasource:
-    url: "jdbc:h2:mem:testdb"   # jdbc es protocolo, h2 base de datos, mem porque es en memoria y testdb es el nombre
+    url: "jdbc:h2:mem:testdb"   # jdbc = protocol, h2 = database type, mem = in-memory, testdb database name
+  jpa:
+    hibernate:
+      ddl-auto: "none" # tell spring to no generate the schema, we are generating it
 ---
 spring:
   config:
