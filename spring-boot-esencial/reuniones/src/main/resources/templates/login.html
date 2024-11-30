@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acceso a las reuniones</title>
+</head>
+<body>
+<form th:action="@{/login}" method="post">
+    <div th:if="${param.error}">
+        Usuario o contraseña incorrectos
+    </div>
+
+    <div th:if="${param.logout}">
+        Has salido de las cuenta
+    </div>
+    <div>
+        <label>Usuerio: <input type="text" name="username"></label>
+    </div>
+    <div>
+        <label>Password: <input type="password" name="password"></label>
+    </div>
+    <div>
+        <input type="submit" value="Entrar">
+    </div>
+
+</form>
+
+</body>
+</html>
