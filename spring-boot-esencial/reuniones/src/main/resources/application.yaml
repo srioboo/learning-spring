@@ -17,6 +17,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: "none" # tell spring to no generate the schema, we are generating it
+  data:
+    rest:
+      base-path: "api/rest"
 ---
 spring:
   config:

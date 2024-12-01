@@ -19,7 +19,7 @@ public class SecurityConfing {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
-                .requestMatchers("/api/*")
+                .requestMatchers("/api/*", "/api/rest/**")
                 .hasRole("API_USER")
                 .and().authorizeHttpRequests().requestMatchers("/*").authenticated()
                 .and().formLogin().loginPage("/login").permitAll() //
